@@ -38,6 +38,8 @@
 #import <execinfo.h>
 #import <libkern/OSAtomic.h>
 
+#define LIBCXXABI_NORETURN  __attribute__((noreturn))
+
 typedef std::vector<BITCrashUncaughtCXXExceptionHandler> BITCrashUncaughtCXXExceptionHandlerList;
 typedef struct
 {
