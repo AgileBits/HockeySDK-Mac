@@ -429,6 +429,7 @@
 		4DD13AF6162CAA2200BF15E8 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		69EAA6771E41054A00DB7393 /* libHockeySDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHockeySDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EECFA6D1CA49ED60090AD57 /* BITChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITChannel.h; sourceTree = "<group>"; };
+		93197A6F1EEA15190014898D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/HockeySDK.strings; sourceTree = "<group>"; };
 		6EECFA6E1CA49ED60090AD57 /* BITChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITChannel.m; sourceTree = "<group>"; };
 		6EECFA6F1CA49ED60090AD57 /* BITChannelPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITChannelPrivate.h; sourceTree = "<group>"; };
 		6F53E3051CF509AE00DC1C64 /* HockeySDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HockeySDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -978,6 +979,7 @@
 				nb,
 				sv,
 				ja,
+				ko,
 			);
 			mainGroup = 1EF09D801523574200067A5C;
 			productRefGroup = 1EF09D8D1523574200067A5C /* Products */;
@@ -1183,6 +1185,7 @@
 				1E66F5E415A1C4BF00C0816F /* nb */,
 				1E66F5E515A1C4D100C0816F /* sv */,
 				1EE8CF7E17147CF20088444D /* ja */,
+				93197A6F1EEA15190014898D /* ko */,
 			);
 			name = HockeySDK.strings;
 			sourceTree = "<group>";
