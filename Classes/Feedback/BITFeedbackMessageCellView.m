@@ -116,11 +116,11 @@
   _message = message;
   
   if (self.message.userMessage) {
-    self.messageTextField.alignment = NSRightTextAlignment;
-    self.dateTextField.alignment = NSRightTextAlignment;
+    self.messageTextField.alignment = NSTextAlignmentRight;
+    self.dateTextField.alignment = NSTextAlignmentRight;
   } else {
-    self.messageTextField.alignment = NSLeftTextAlignment;
-    self.dateTextField.alignment = NSLeftTextAlignment;
+    self.messageTextField.alignment = NSTextAlignmentLeft;
+    self.dateTextField.alignment = NSTextAlignmentLeft;
   }
   
   self.messageTextField.stringValue = message.text;

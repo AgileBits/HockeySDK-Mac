@@ -16,7 +16,7 @@
     _indicator = [[NSProgressIndicator alloc] initWithFrame:self.bounds];
     
     [_indicator setStyle: NSProgressIndicatorSpinningStyle];
-    [_indicator setControlSize: NSSmallControlSize];
+    [_indicator setControlSize: NSControlSizeSmall];
     [_indicator sizeToFit];
     
     _indicator.hidden = YES;

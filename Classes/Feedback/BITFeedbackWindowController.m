@@ -223,7 +223,7 @@ static NSString * const BITFeedbackMessageDateValueTransformerName = @"BITFeedba
   
   [image lockFocus];
   [[[NSColor whiteColor] colorWithAlphaComponent: alpha] set];
-  NSRectFillUsingOperation(imageRect, NSCompositeSourceAtop);
+  NSRectFillUsingOperation(imageRect, NSCompositingOperationSourceAtop);
   [image unlockFocus];
   
   return image;
@@ -422,7 +422,7 @@ static NSString * const BITFeedbackMessageDateValueTransformerName = @"BITFeedba
   [attributedText endEditing];
   
   NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
-  [paraStyle setAlignment:NSCenterTextAlignment];
+  [paraStyle setAlignment:NSTextAlignmentCenter];
   [attributedText addAttributes:@{NSParagraphStyleAttributeName: paraStyle} range:NSMakeRange(0, [attributedText length])];
   
   self.statusBarTextField.attributedStringValue = attributedText;
@@ -735,7 +735,7 @@ static NSString * const BITFeedbackMessageDateValueTransformerName = @"BITFeedba
 
 - (BOOL)previewPanel:(QLPreviewPanel *) __unused panel handleEvent:(NSEvent *)event {
   // redirect all key down events to the table view
-  if ([event type] == NSKeyDown) {
+  if ([event type] == NSEventTypeKeyDown) {
     [self.feedbackTableView keyDown:event];
     return YES;
   }
