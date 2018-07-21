@@ -114,7 +114,7 @@ static const CGFloat kDetailsHeight = 285;
 - (IBAction)showComments: (id) sender {
   NSRect windowFrame = [[self window] frame];
   
-  if ([sender intValue]) {
+  if ([((NSNumber *)sender) intValue]) {
     [self setShowComments: NO];
     
     windowFrame.size = NSMakeSize(windowFrame.size.width, windowFrame.size.height + kCommentsHeight);
