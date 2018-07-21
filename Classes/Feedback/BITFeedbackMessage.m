@@ -27,7 +27,7 @@
 
 
 - (id)copyWithZone:(NSZone *)zone {
-  BITFeedbackMessage *copy = [[[self class] allocWithZone: zone] init];
+  BITFeedbackMessage *copy = [((BITFeedbackMessage *)[[self class] allocWithZone: zone]) init];
   
   [copy setText: self.text];
   [copy setUserID: self.userID];
