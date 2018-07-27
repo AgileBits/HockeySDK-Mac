@@ -651,7 +651,8 @@ __attribute__((noreturn)) static void uncaught_cxx_exception_handler(const BITCr
     
     while ((file = [dirEnum nextObject])) {
       NSDictionary *fileAttributes = [self.fileManager attributesOfItemAtPath:[self.crashesDir stringByAppendingPathComponent:file] error:&error];
-      if ([[fileAttributes objectForKey:NSFileSize] intValue] > 0 &&
+        NSNumber *fileSize = [fileAttributes objectForKey:NSFileSize];
+        if ([fileSize intValue] > 0 &&
           ![file hasSuffix:@".DS_Store"] &&
           ![file hasSuffix:@".analyzer"] &&
           ![file hasSuffix:@".plist"] &&

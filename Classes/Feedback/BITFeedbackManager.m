@@ -591,7 +591,8 @@
           // TODO: match messages in state conflict
           
           [messagesSendInProgress enumerateObjectsUsingBlock:^(id objSendInProgressMessage, NSUInteger __unused messagesSendInProgressIdx, BOOL *stop2) {
-            if ([[objMessage objectForKey:@"token"] isEqualToString:[(BITFeedbackMessage *)objSendInProgressMessage token]]) {
+              NSString *extractedToken = [objMessage objectForKey:@"token"];
+            if ([extractedToken isEqualToString:[(BITFeedbackMessage *)objSendInProgressMessage token]]) {
               matchingSendInProgressOrInConflictMessage = objSendInProgressMessage;
               *stop2 = YES;
             }

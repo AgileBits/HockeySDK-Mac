@@ -51,7 +51,7 @@
 
 -(id)transformedValue:(id)message {
   NSString *result = @"";
-  if (!message || ![message isKindOfClass:[BITFeedbackMessage class]]) {
+  if (!message || ![((NSObject *)message) isKindOfClass:[BITFeedbackMessage class]]) {
     return nil;
   }
   BITFeedbackMessage *feedbackMessage = (BITFeedbackMessage *)message;
