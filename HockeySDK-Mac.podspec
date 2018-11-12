@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name              = 'HockeySDK-Mac'
-  s.version           = '5.1.0'
+  s.version           = '5.1.1'
 
   s.summary           = 'Collect live crash reports, get feedback from your users, distribute your betas, and get usage data.'
   s.description       = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.source = { :http => "https://github.com/bitstadium/HockeySDK-Mac/releases/download/#{s.version}/HockeySDK-Mac-#{s.version}.zip" }
 
   s.platform              = :osx, '10.9'
-  s.osx.deployment_target = 10.9
+  s.osx.deployment_target = '10.9'
   s.requires_arc          = false
   
   s.vendored_frameworks   = "HockeySDK-Mac/HockeySDK.framework"
