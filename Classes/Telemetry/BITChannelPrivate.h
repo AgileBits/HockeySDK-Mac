@@ -47,12 +47,12 @@ FOUNDATION_EXPORT NSString *const BITChannelBlockedNotification;
 /**
  *  A timer source which is used to flush the queue after a cretain time.
  */
-@property (nonatomic, assign, nullable) dispatch_source_t timerSource;
+@property (nonatomic, strong, nullable) dispatch_source_t timerSource;
 
 /**
  *  A queue which makes array operations thread safe.
  */
-@property (nonatomic, assign) dispatch_queue_t dataItemsOperations;
+@property (nonatomic, strong) dispatch_queue_t dataItemsOperations;
 
 /**
  *  An integer value that keeps tracks of the number of data items added to the JSON Stream string.
@@ -67,29 +67,28 @@ FOUNDATION_EXPORT NSString *const BITChannelBlockedNotification;
 /**
  *  Manually trigger the BITChannel to persist all items currently in its data item queue.
  */
-- (void)persistDataItemQueue;
+- (void)persistDataItemQueue:(char *_Nullable*_Nullable)eventBuffer;
 
 /**
  *  Adds the specified dictionary to the JSON Stream string.
  *
  *  @param dictionary the dictionary object which is to be added to the JSON Stream queue string.
  */
-- (void)appendDictionaryToJsonStream:(NSDictionary *)dictionary;
+- (void)appendDictionaryToEventBuffer:(NSDictionary *)dictionary;
 
 /**
  *  A C function that serializes a given dictionary to JSON and appends it to a char string
  *
- *  @param dictionary A dictionary which will be serialized to JSON and then appended to the string.
  *  @param string The C string which the dictionary's JSON representation will be appended to.
  */
-void bit_appendStringToSafeJsonStream(NSString *string, char *__nonnull*__nonnull jsonStream);
+void bit_appendStringToEventBuffer(NSString *string, char *__nonnull*__nonnull eventBuffer);
 
 /**
- *  Reset BITSafeJsonEventsString so we can start appending JSON dictionaries.
+ *  Reset the event buffer so we can start appending JSON dictionaries.
  *
- *  @param string The string that will be reset.
+ *  @param eventBuffer The string that will be reset.
  */
-void bit_resetSafeJsonStream(char *__nonnull*__nonnull jsonStream);
+void bit_resetEventBuffer(char *__nonnull*__nonnull eventBuffer);
 
 /**
  *  A method which indicates whether the telemetry pipeline is busy and no new data should be enqueued.

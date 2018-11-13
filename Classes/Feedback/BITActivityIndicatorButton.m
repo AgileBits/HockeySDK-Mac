@@ -12,11 +12,11 @@
 @implementation BITActivityIndicatorButton
 
 - (instancetype)initWithFrame:(NSRect)frameRect {
-  if (self = [super initWithFrame:frameRect]) {
+  if ((self = [super initWithFrame:frameRect])) {
     _indicator = [[NSProgressIndicator alloc] initWithFrame:self.bounds];
     
     [_indicator setStyle: NSProgressIndicatorSpinningStyle];
-    [_indicator setControlSize: NSSmallControlSize];
+    [_indicator setControlSize: NSControlSizeSmall];
     [_indicator sizeToFit];
     
     _indicator.hidden = YES;
