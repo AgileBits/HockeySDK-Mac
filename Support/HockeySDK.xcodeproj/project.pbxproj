@@ -422,6 +422,7 @@
 		80EF93A11CD9334B006722E1 /* BITHockeyLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHockeyLogger.m; sourceTree = "<group>"; };
 		80EF93A21CD9334B006722E1 /* BITHockeyLoggerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHockeyLoggerPrivate.h; sourceTree = "<group>"; };
 		80EF93A61CD94773006722E1 /* HockeySDKEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HockeySDKEnums.h; path = ../Classes/Helper/HockeySDKEnums.h; sourceTree = "<group>"; };
+		93197A6F1EEA15190014898D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/HockeySDK.strings; sourceTree = "<group>"; };
 		B270E4D51F3A51BC001C1C85 /* HockeySDKPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HockeySDKPrivate.h; sourceTree = "<group>"; };
 		B270E4D61F3A51BC001C1C85 /* HockeySDKPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HockeySDKPrivate.m; sourceTree = "<group>"; };
 		B270E4DB1F3A52A2001C1C85 /* HockeySDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HockeySDK.h; sourceTree = "<group>"; };
@@ -493,6 +494,23 @@
 				1B078E321C98847100E2FD59 /* BITUser.m */,
 			);
 			name = "Contract Files";
+			sourceTree = "<group>";
+		};
+		1E260C7717D401D000C7F9FE /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				1E260C7817D401D000C7F9FE /* Changelog-template.md */,
+				1E260C7917D401D000C7F9FE /* Guide-Installation-Mac-App-template.md */,
+				1E260C7A17D401D000C7F9FE /* Guide-Installation-Setup-template.md */,
+				1EFFB86117D49DE1003FA1FD /* Guide-Migration-template.md */,
+				1E260C7C17D401D100C7F9FE /* HowTo-App-Versioning-template.md */,
+				1E260C7D17D401D100C7F9FE /* HowTo-Upload-Symbols-template.md */,
+				1E260C7E17D401D100C7F9FE /* index.html */,
+				1E260C7F17D401D200C7F9FE /* index.md */,
+				1E14CB2117E1F1EA00EEFF50 /* Troubleshooting-Crash-Reporting-Not-Working-template.md */,
+			);
+			name = docs;
+			path = ../docs;
 			sourceTree = "<group>";
 		};
 		1E260C9917D40FED00C7F9FE /* Helper */ = {
@@ -943,6 +961,7 @@
 				nb,
 				sv,
 				ja,
+				ko,
 			);
 			mainGroup = 1EF09D801523574200067A5C;
 			productRefGroup = 1EF09D8D1523574200067A5C /* Products */;
@@ -1146,6 +1165,7 @@
 				1E66F5E415A1C4BF00C0816F /* nb */,
 				1E66F5E515A1C4D100C0816F /* sv */,
 				1EE8CF7E17147CF20088444D /* ja */,
+				93197A6F1EEA15190014898D /* ko */,
 			);
 			name = HockeySDK.strings;
 			sourceTree = "<group>";
@@ -1201,6 +1221,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1248,6 +1270,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
